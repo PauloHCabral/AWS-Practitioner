@@ -160,3 +160,60 @@ AWS Config: Auditoria e conformidade da configuração de recursos.
 
 
 
+Modelo de Responsabilidade Compartilhada na AWS
+
+A AWS adota um modelo de responsabilidade compartilhada, no qual tanto a AWS quanto o cliente têm responsabilidades específicas relacionadas à segurança e operação dos serviços em nuvem.
+
+1. Responsabilidade da AWS ("Segurança da Nuvem")
+
+A AWS é responsável por proteger a infraestrutura que executa todos os serviços oferecidos na Nuvem AWS:
+
+Hardware (servidores, discos, roteadores, etc.)
+
+Software de virtualização
+
+Instalações físicas (datacenters)
+
+Redes e infraestrutura global
+
+Exemplos:
+
+Manutenção dos data centers
+
+Proteção contra ameaças físicas
+
+Atualizações de hardware e infraestrutura
+
+2. Responsabilidade do Cliente ("Segurança na Nuvem")
+
+O cliente é responsável por tudo o que ele cria, carrega, configura e gerencia dentro da nuvem.
+
+Gerenciamento de dados e criptografia
+
+Configuração de segurança nos serviços (firewalls, grupos de segurança)
+
+Gerenciamento de identidade e acesso (IAM)
+
+Atualização de sistemas operacionais e aplicações (em EC2, por exemplo)
+
+Exemplos:
+
+Definir quem pode acessar o quê (via IAM)
+
+Garantir que os dados armazenados estão criptografados
+
+Monitorar logs e atividades com CloudTrail e CloudWatch
+
+Resumo Visual (exemplo EC2):
+
+AWS gerencia: Infraestrutura física, rede, virtualização
+
+Cliente gerencia: Sistema operacional, atualizações, dados, permissões, aplicações
+
+Esse modelo é essencial para entender até onde vai a segurança da AWS e onde começa a sua. Entender isso é fundamental para tirar a certificação AWS Cloud Practitioner.
+
+
+
+
+
+
