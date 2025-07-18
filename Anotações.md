@@ -17,3 +17,61 @@ Escalabilidade: A infraestrutura se ajusta automaticamente — ou manualmente �
 
 
 
+2 - Tipos de Cloud
+
+IaaS (Infraestrutura como Serviço):
+Você paga para utilizar a infraestrutura de uma provedora de Cloud. É o modelo mais básico, onde a provedora gerencia apenas a infraestrutura (servidores, armazenamento e rede), enquanto você é responsável pela instalação, configuração e gerenciamento do sistema operacional, aplicativos e dados.
+
+PaaS (Plataforma como Serviço):
+Você paga para utilizar uma plataforma completa fornecida pela provedora, que inclui tanto a infraestrutura quanto ferramentas de desenvolvimento e gerenciamento. A responsabilidade da provedora aumenta, cuidando da infraestrutura e da plataforma, enquanto você se concentra apenas no desenvolvimento e execução das aplicações.
+
+SaaS (Software como Serviço):
+Você utiliza um software pronto, acessado pela internet, sem se preocupar com a infraestrutura ou plataforma. A provedora gerencia tudo (infraestrutura, plataforma e software), e o usuário final apenas consome o serviço. É o modelo com o menor nível de responsabilidade do cliente.
+
+
+Responsabilidades nos Modelos de Cloud Computing:
+
+IaaS (Infrastructure as a Service)
+Gerenciado pela provedora:
+  ✅ Virtualização
+  ✅ Servidores (Servers)
+  ✅ Armazenamento (Storage)
+  ✅ Rede (Network)
+
+Gerenciado pelo cliente (você):
+  ⚙️ Aplicações
+  ⚙️ Dados (Data)
+  ⚙️ Runtime
+  ⚙️ Middleware
+  ⚙️ Sistema Operacional (OS)
+
+PaaS (Platform as a Service)
+Gerenciado pela provedora:
+  ✅ Rede (Network)
+  ✅ Armazenamento (Storage)
+  ✅ Servidores (Servers)
+  ✅ Virtualização
+  ✅ Sistema Operacional
+  ✅ Middleware
+  ✅ Runtime
+
+Gerenciado pelo cliente (você):
+  ⚙️ Dados (Data)
+  ⚙️ Aplicações (Applications)
+
+SaaS (Software as a Service)
+Gerenciado pela provedora:
+  ✅ Rede (Network)
+  ✅ Armazenamento (Storage)
+  ✅ Servidores (Servers)
+  ✅ Virtualização
+  ✅ Sistema Operacional
+  ✅ Middleware
+  ✅ Runtime
+  ✅ Dados (Data)
+  ✅ Aplicações (Applications)
+
+
+
+
+
