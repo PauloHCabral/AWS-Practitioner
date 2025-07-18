@@ -73,5 +73,47 @@ Gerenciado pela provedora:
 
 
 
+Cloud Publica, Hybrida e  Privada
+
+1. Nuvem Pública (Public Cloud)
+
+Definição: Infraestrutura é disponibilizada ao público por um provedor terceirizado (ex: AWS, Azure, Google Cloud).
+
+Acesso: Compartilhado entre vários clientes (multitenancy).
+
+Vantagens: Escalabilidade, baixo custo inicial, manutenção feita pela provedora.
+
+Exemplo: Usar o Amazon S3 para armazenar arquivos.
+
+2. Nuvem Privada (Private Cloud)
+
+Definição: Infraestrutura dedicada exclusivamente a uma única organização.
+
+Acesso: Apenas pela própria organização (pode estar localmente ou em data centers de terceiros).
+
+Vantagens: Maior controle, segurança e personalização.
+
+Exemplo: Empresa que monta sua própria nuvem interna com OpenStack.
+
+3. Nuvem Híbrida (Hybrid Cloud)
+
+Definição: Combinação de nuvem pública e privada, funcionando de forma integrada para compartilhar dados e aplicações entre os ambientes.
+
+Acesso: Parte interna (privada) e parte externa (pública), com integração segura entre elas.
+
+Vantagens:
+
+Flexibilidade: aproveita o melhor dos dois mundos.
+
+Escalabilidade sob demanda usando recursos da nuvem pública.
+
+Maior segurança para dados sensíveis mantidos na nuvem privada.
+
+Exemplo: Uma empresa usa a nuvem privada para dados financeiros sensíveis e a pública para hospedar um site de e-commerce com alta demanda.
+
+
+
+AWS Services 
+
 
 
