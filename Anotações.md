@@ -115,5 +115,48 @@ Exemplo: Uma empresa usa a nuvem privada para dados financeiros sensíveis e a p
 
 AWS Services 
 
+Principais Serviços da AWS
+1. Cálculo (Compute)
+Amazon EC2 (Elastic Compute Cloud): Máquinas virtuais escaláveis na nuvem.
+
+AWS Lambda: Executa seu código sob demanda, sem necessidade de servidores (serverless).
+
+Elastic Beanstalk: Plataforma para implantar e escalar automaticamente aplicações web.
+
+2. Armazenamento (Storage)
+Amazon S3 (Simple Storage Service): Armazenamento de objetos, ideal para backups, imagens, vídeos etc.
+
+Amazon EBS (Elastic Block Store): Armazenamento em bloco usado com EC2.
+
+Amazon Glacier: Armazenamento de arquivos de longo prazo e baixo custo.
+
+3. Banco de Dados (Databases)
+Amazon RDS (Relational Database Service): Banco de dados relacional gerenciado (MySQL, PostgreSQL, SQL Server, Oracle).
+
+Amazon DynamoDB: Banco de dados NoSQL altamente escalável e gerenciado.
+
+Amazon Aurora: Banco de dados relacional compatível com MySQL e PostgreSQL, com alto desempenho.
+
+4. Redes e Entrega de Conteúdo (Networking & CDN)
+Amazon VPC (Virtual Private Cloud): Rede virtual isolada na nuvem.
+
+Amazon Route 53: Serviço de DNS e roteamento.
+
+Amazon CloudFront: CDN (Content Delivery Network) para entrega rápida de conteúdo globalmente.
+
+5. Segurança, Identidade e Conformidade
+AWS IAM (Identity and Access Management): Controle de usuários e permissões.
+
+AWS KMS (Key Management Service): Gerenciamento de chaves de criptografia.
+
+AWS Shield: Proteção contra ataques DDoS.
+
+6. Monitoramento e Gerenciamento
+Amazon CloudWatch: Coleta de logs e monitoramento de recursos AWS.
+
+AWS CloudFormation: Infraestrutura como código (IaC).
+
+AWS Config: Auditoria e conformidade da configuração de recursos.
+
 
 
