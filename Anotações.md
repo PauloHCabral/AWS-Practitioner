@@ -214,6 +214,76 @@ Esse modelo é essencial para entender até onde vai a segurança da AWS e onde 
 
 
 
+🔷 1. Conceitos Principais da Infraestrutura Global
+🟩 1.1. Região (Region)
+Uma Região é uma área geográfica distinta que contém múltiplas Zonas de Disponibilidade (AZs).
+
+Cada região é fisicamente isolada das outras para oferecer tolerância a falhas regionais.
+
+Nomeadas como us-east-1 (Virgínia), sa-east-1 (São Paulo), etc.
+
+📌 Exemplo:
+A região São Paulo (sa-east-1) tem 3 Zonas de Disponibilidade.
+
+🟩 1.2. Zona de Disponibilidade (Availability Zone - AZ)
+Uma AZ é composta por um ou mais data centers físicos com energia, refrigeração e redes independentes.
+
+As AZs de uma mesma região estão interconectadas por links redundantes e de baixa latência.
+
+Você pode implantar seus recursos em múltiplas AZs para garantir alta disponibilidade e tolerância a falhas.
+
+📌 Exemplo:
+Na região us-east-1 (Norte da Virgínia), há 6 zonas de disponibilidade: us-east-1a, us-east-1b, ..., us-east-1f.
+
+🟩 1.3. Localizações Locais (Local Zones)
+Local Zones são extensões de uma região da AWS, localizadas próximas a grandes centros urbanos para oferecer latência ultra baixa.
+
+Ideal para workloads como jogos, edição de vídeo e renderização.
+
+🟩 1.4. Pontos de Presença (Edge Locations)
+Usados principalmente pelos serviços de entrega de conteúdo como o Amazon CloudFront.
+
+Servem como cache de conteúdo estático, reduzindo a latência para usuários finais.
+
+🟩 1.5. Outposts, Wavelength, e AWS Snow Family
+Esses são recursos especializados da infraestrutura global:
+
+Outposts: extensão da infraestrutura da AWS para seu datacenter local (nuvem híbrida).
+
+Wavelength: para aplicativos 5G de baixa latência, integrando AWS com redes móveis.
+
+Snow: dispositivos físicos para migração ou computação em ambientes desconectados/extremos.
+
+🌍 Resumo da Estrutura Hierárquica
+scss
+Copiar
+Editar
+Infraestrutura Global
+├── Regiões (Regions)
+│   ├── Zonas de Disponibilidade (AZs)
+│   │   └── Data Centers
+│   └── Local Zones
+└── Edge Locations (CloudFront, Route 53, etc)
+📊 Números Atualizados (2025 – estimativa)
++33 Regiões ativas.
+
++100 Zonas de Disponibilidade.
+
++450 Pontos de Presença (Edge Locations) em mais de 90 cidades.
+
+Regiões futuras planejadas em países como México, Tailândia, Grécia e Malásia.
+
+✅ Benefícios dessa Infraestrutura
+Alta disponibilidade (você pode replicar entre AZs).
+
+Redundância geográfica (entre regiões).
+
+Redução de latência com Edge Locations.
+
+Maior resiliência a falhas de energia, hardware e rede
+
+
+
 
 
 
