@@ -284,6 +284,69 @@ Maior resiliência a falhas de energia, hardware e rede
 
 
 
+Introdução IAM
+
+
+
+✅ Para que serve o IAM?
+IAM responde a perguntas como:
+
+Quem pode acessar os recursos da AWS?
+
+O que essas pessoas (ou sistemas) podem fazer?
+
+Em quais recursos elas podem fazer isso?
+
+🧱 Componentes principais do IAM:
+1. Usuários (Users)
+Pessoas ou aplicações que precisam acessar os recursos da AWS.
+Exemplo: Paulo, ou um script Python que acessa o S3.
+
+2. Grupos (Groups)
+Conjunto de usuários com permissões semelhantes.
+Exemplo: Grupo "Desenvolvedores" com acesso ao EC2 e S3.
+
+3. Políticas (Policies)
+Regras que definem o que um usuário ou grupo pode ou não fazer.
+São documentos em JSON com permissões.
+Exemplo: Permitir s3:ListBucket no bucket X.
+
+4. Funções (Roles)
+Identidades com permissões específicas, que podem ser assumidas temporariamente por usuários, serviços AWS, ou aplicações externas.
+Exemplo: Um EC2 assume uma role para acessar o DynamoDB sem precisar de credenciais.
+
+5. Entidades confiáveis
+Quem pode assumir uma role:
+
+Serviços AWS (ex: Lambda, EC2)
+
+Outras contas AWS
+
+Identidades federadas (ex: login via Google, AD, etc.)
+
+🔒 Princípio do menor privilégio
+IAM segue a regra de segurança mais importante:
+
+"Dê somente as permissões mínimas necessárias para realizar uma tarefa."
+
+🧠 Exemplo prático
+Suponha que você tenha um bucket no S3 com relatórios financeiros.
+Você pode:
+
+Criar um usuário João
+
+Criar uma política que permite apenas leitura no bucket
+
+Anexar essa política ao João
+
+Assim, João pode ver os relatórios, mas não pode apagar nem modificar nada.
+
+🧭 Como o IAM se encaixa na AWS?
+IAM é global, ou seja, não depende de regiões.
+Ele é a porta de entrada da AWS: sem IAM, não há controle de acesso.
+
+
+
 
 
 
