@@ -1,0 +1,73 @@
+🐳 O que é Docker?
+Docker é uma plataforma de containers.
+Ele permite empacotar uma aplicação junto com tudo o que ela precisa para rodar (código, dependências, bibliotecas, sistema base) em um container.
+
+📦 O que é um Container?
+Um container é como uma caixinha leve e portátil que tem:
+
+✅ Seu código
+✅ Suas dependências
+✅ Um sistema base mínimo (como Linux)
+✅ Tudo isso isolado do resto do sistema
+
+🧠 Modelo mental simples:
+Sem Docker: você instala o Python, configura o ambiente, instala libs, depende do SO e das versões certas.
+
+Com Docker: você roda um container já pronto com tudo configurado, igualzinho em qualquer computador.
+
+🏗️ Por que usar Docker?
+Vantagem	Explicação rápida
+Portabilidade	Roda o mesmo container em Windows, Linux, Mac ou em servidores na nuvem.
+Isolamento	Cada container é isolado, sem interferir em outros.
+Reprodutibilidade	Evita o clássico “na minha máquina funciona” – tudo roda igual em qualquer lugar.
+Agilidade	Instalar um app via Docker leva segundos. Sem conflitos de versões.
+Integração com DevOps	Usado em CI/CD, ambientes de testes, microsserviços e deploys na nuvem.
+
+📜 Principais Conceitos
+Conceito	O que é	Exemplo prático
+Imagem (Image)	Modelo ou "receita" de um container	python:3.11, nginx:latest, ubuntu:20.04
+Container	Instância em execução da imagem	Um servidor rodando seu app isolado
+Dockerfile	Script que define como a imagem é criada	Como um "receita de bolo" do seu container
+Docker Hub	Repositório público de imagens	Onde você encontra imagens prontas
+Volume	Área de armazenamento persistente (fora do container)	Para não perder dados quando container for reiniciado
+Porta (-p)	Redireciona portas da máquina para o container	-p 8080:80 → acessa o Nginx via navegador
+
+🚀 Exemplo Prático: rodando um site Nginx
+bash
+Copiar
+Editar
+docker run -d -p 8080:80 nginx
+docker run: comando para iniciar um container
+
+-d: executa em segundo plano (detached)
+
+-p 8080:80: redireciona a porta 80 do container para a 8080 do seu PC
+
+nginx: nome da imagem (baixada do Docker Hub)
+
+👉 Agora, se você acessar http://localhost:8080, verá o site padrão do Nginx!
+
+🛠️ Fluxo típico com Docker
+Criar seu Dockerfile com o que a aplicação precisa
+
+Criar uma imagem com docker build
+
+Rodar a imagem como um container com docker run
+
+(Opcional) Subir para o Docker Hub ou usar em CI/CD
+
+📁 Exemplo de Dockerfile (Python)
+Dockerfile
+Copiar
+Editar
+FROM python:3.11-slim
+
+WORKDIR /app
+
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+
+COPY . .
+
+CMD ["python", "meu_app.py"]
+
