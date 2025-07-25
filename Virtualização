@@ -1,0 +1,88 @@
+✅ EC2 – Elastic Compute Cloud
+💡 Definição simples:
+O Amazon EC2 (Elastic Compute Cloud) é um serviço de computação que permite criar servidores virtuais (chamados de instâncias) na nuvem. Você pode usar essas máquinas para hospedar sites, rodar aplicações, criar ambientes de testes, entre outros.
+
+🟩 Vantagens do EC2
+🔧 1. Controle
+Quando criamos uma instância EC2, ganhamos total controle sobre ela.
+Podemos escolher a quantidade de memória, vCPUs, armazenamento e até alterar essas configurações depois.
+
+✅ Correção:
+
+Ao criar uma instância EC2, você obtém uma chave (Key Pair) para acesso seguro, além de poder configurar recursos como CPU, memória, armazenamento e rede de acordo com sua necessidade.
+
+🔒 2. Segurança
+O acesso remoto é protegido com chave SSH (em Linux) ou senha criptografada (em Windows).
+Além disso, usamos Security Groups, que funcionam como firewalls virtuais, bloqueando ou permitindo tráfego específico.
+
+✅ Correção:
+
+A segurança da instância EC2 é garantida por meio de Key Pairs (chaves criptográficas) e Security Groups, que controlam o tráfego de entrada e saída da instância.
+
+🔗 3. Integração com outros serviços da AWS
+Uma EC2 pode se conectar com S3, RDS, DynamoDB, CloudWatch, etc.
+
+✅ Correção:
+
+A instância EC2 pode ser configurada para interagir com diversos serviços da AWS.
+Por exemplo: acessar arquivos em um bucket S3 ou enviar logs para o CloudWatch.
+
+💰 4. Custo baixo (Free Tier)
+A AWS oferece uma camada gratuita (Free Tier) com instância t2.micro (ou t3.micro), que pode ser usada gratuitamente por 12 meses com uso limitado.
+
+✅ Correção:
+
+Se você escolher uma configuração simples, como uma instância t2.micro, ela pode estar disponível gratuitamente por até 12 meses dentro do Free Tier da AWS.
+
+😊 5. Facilidade (Uncomplicated)
+Criar uma instância EC2 é simples.
+A AWS fornece um assistente (wizard) com opções pré-configuradas, o que facilita a criação para iniciantes.
+
+✅ Correção:
+
+A criação de uma instância EC2 é simples e rápida, podendo ser feita com poucos cliques no Console da AWS.
+
+🧾 User Data
+O User Data é um campo opcional onde você pode colocar um script de inicialização (como bash script ou PowerShell).
+Ele roda automaticamente na primeira vez que a instância for criada.
+
+✅ Correção:
+
+User Data é um campo usado para automatizar a configuração inicial da instância EC2, permitindo instalar pacotes, iniciar serviços ou configurar o sistema automaticamente.
+
+Exemplo de User Data simples (Linux):
+
+bash
+Copiar
+Editar
+#!/bin/bash
+sudo apt update
+sudo apt install apache2 -y
+🧮 AWS Batch (introdução rápida)
+O AWS Batch é um serviço que permite rodar tarefas em lote (batch jobs) de forma escalável, com uso automático de instâncias EC2 para executar scripts de processamento.
+
+✅ Correção:
+
+O AWS Batch executa scripts ou tarefas em lote de forma automática, sem que você precise se preocupar em gerenciar a infraestrutura subjacente.
+
+✅ Texto final corrigido e organizado:
+EC2 – Elastic Compute Cloud
+O EC2 é o serviço de computação da AWS que permite criar servidores virtuais na nuvem.
+
+Vantagens:
+Controle: Escolha CPU, memória, disco e acesse com chave SSH. Pode alterar recursos conforme necessidade.
+
+Segurança: Acesso via Key Pair e controle de tráfego via Security Groups.
+
+Integração com AWS: A EC2 pode se comunicar com S3, CloudWatch, RDS, etc.
+
+Custo Baixo: A instância t2.micro está disponível gratuitamente no Free Tier por até 12 meses.
+
+Facilidade: Interface intuitiva para criação rápida de máquinas virtuais.
+
+User Data:
+Permite automatizar a configuração inicial da instância EC2, executando scripts na primeira inicialização.
+
+AWS Batch:
+Executa tarefas em lote automaticamente, utilizando instâncias EC2 sob demanda, sem a necessidade de gerenciar a infraestrutura.
+
