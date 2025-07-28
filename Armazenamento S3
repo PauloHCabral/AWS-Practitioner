@@ -1,0 +1,53 @@
+STORAGE
+
+✅ S3 (Simple Storage Service)
+Tipo: Objeto
+Descrição: Armazenamento de objetos para dados não estruturados (fotos, vídeos, backups, logs).
+Casos de uso: Backup, arquivos estáticos, big data, sites estáticos.
+
+
+🧊 Glacier (Amazon S3 Glacier / Glacier Deep Archive)
+Tipo: Arquivo (archival storage)
+Descrição: Armazenamento de objetos para arquivamento de longo prazo com acesso lento (de minutos a horas).
+Casos de uso: Arquivamento, retenção de dados antigos, compliance.
+
+📂 EFS (Elastic File System)
+Tipo: Arquivo (file system)
+Descrição: Armazenamento em rede compartilhado para múltiplas instâncias EC2, baseado em NFS.
+Casos de uso: Aplicações Linux que exigem armazenamento compartilhado (web servers, apps distribuídos).
+
+
+📦 Snowball
+Tipo: Dispositivo físico de transferência de dados
+Descrição: Appliance da AWS para mover grandes volumes de dados (TB ou PB) para a nuvem.
+Casos de uso: Migração de datacenter, backup offline, regiões com internet limitada.
+
+
+
+🌍 CloudFront
+Tipo: CDN (Content Delivery Network)
+Descrição: Distribuição de conteúdo com baixa latência e alta velocidade através de servidores globais.
+Casos de uso: Sites, vídeos, apps com usuários globais — acelera o acesso a conteúdo armazenado no S3, por exemplo.
+
+
+
+🏠 Storage Gateway
+Tipo: Híbrido (local + cloud)
+Descrição: Integra data centers locais com a AWS, permitindo backup e acesso aos dados via protocolos locais (iSCSI, NFS, SMB).
+Casos de uso: Backup local para S3, uso de AWS como extensão do storage local.
+
+
+
+💾 EBS (Elastic Block Store)
+Tipo: Bloco
+Descrição: Armazenamento em bloco persistente para instâncias EC2. É como um HD para o EC2.
+Casos de uso: Sistemas de arquivos, bancos de dados, aplicações que precisam de acesso rápido e consistente.
+
+
+
+
+⚡ Instance Store (EC2 Instance Storage)
+Tipo: Bloco (temporário)
+Descrição: Armazenamento físico local da instância EC2. Volátil — dados somem se a instância for parada.
+Casos de uso: Cache temporário, buffer, dados descartáveis.
+
