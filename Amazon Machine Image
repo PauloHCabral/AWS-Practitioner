@@ -1,0 +1,68 @@
+🧩 O que é uma AMI?
+A AMI (Amazon Machine Image) é uma imagem do sistema operacional + configurações + aplicações pré-instaladas que você usa para lançar instâncias EC2.
+
+➡️ Com uma AMI personalizada, você cria uma imagem exatamente com o que precisa — já configurada e otimizada para o seu uso.
+
+🧰 Para que serve uma AMI personalizada?
+Criar instâncias EC2 idênticas rapidamente
+
+Pré-instalar pacotes, apps, scripts
+
+Configurar firewall, rede, usuários
+
+Automatizar ambientes para desenvolvimento, testes ou produção
+
+Garantir consistência entre servidores
+
+🛠️ Como criar uma AMI personalizada
+1. Lance uma instância EC2 padrão
+Ex: Ubuntu, Amazon Linux, etc.
+
+bash
+Copiar
+Editar
+aws ec2 run-instances --image-id ami-xxxxxxxxxxxx --instance-type t2.micro
+2. Acesse a instância e configure
+bash
+Copiar
+Editar
+ssh -i "minha-chave.pem" ec2-user@ip-da-instancia
+Dentro da instância, instale o que quiser:
+
+bash
+Copiar
+Editar
+sudo yum update -y
+sudo yum install httpd -y
+echo "Meu servidor pronto!" > /var/www/html/index.html
+3. Crie a AMI personalizada a partir da instância
+No console ou via CLI:
+
+bash
+Copiar
+Editar
+aws ec2 create-image \
+  --instance-id i-xxxxxxxxxxxx \
+  --name "Minha-AMI-Apache" \
+  --no-reboot
+--no-reboot: evita reiniciar a instância durante o processo.
+
+4. Use essa AMI para criar novas EC2
+Depois de criada, você pode lançar quantas instâncias quiser com essa AMI personalizada.
+
+🎁 Vantagens
+Vantagem	Descrição
+⚡ Rapidez	Instâncias sobem já configuradas
+🛠️ Padronização	Todas as EC2 seguem o mesmo padrão
+🌀 Automação com Auto Scaling	Ideal para auto scaling groups
+🔁 Backup e recuperação	Pode ser usada como backup de configuração
+
+☁️ Extras
+Você pode compartilhar AMIs com outras contas ou copiar entre regiões.
+
+Exemplo:
+
+bash
+Copiar
+Editar
+aws ec2 modify-image-attribute --image-id ami-xxxxx --launch-permission "Add=[{UserI
